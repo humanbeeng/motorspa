@@ -10,7 +10,7 @@
 		supabase.auth.signInWithOAuth({
 			provider: 'google',
 			options: {
-				redirectTo: '/auth/callback'
+				redirectTo: 'https://motorspa.vercel.app/auth/callback'
 			}
 		});
 		setTimeout(() => {
