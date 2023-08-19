@@ -1,6 +1,5 @@
 <script lang="ts">
 	export let data;
-	import { PUBLIC_SITE_URL } from '$env/static/public';
 	import { Icons } from '$components/docs/icons';
 	let { supabase } = data;
 	$: ({ supabase } = data);
@@ -11,11 +10,7 @@
 		supabase.auth.signInWithOAuth({
 			provider: 'google',
 			options: {
-				redirectTo: `${
-					PUBLIC_SITE_URL
-						? PUBLIC_SITE_URL + '/auth/callback'
-						: 'http://localhost:5173/auth/callback'
-				}`
+				redirectTo: `${location.origin}/auth/callback`
 			}
 		});
 		setTimeout(() => {
