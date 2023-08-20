@@ -60,10 +60,14 @@
 <!-- </div> -->
 
 <div class="shadow-sm border-gray-200 rounded-md border p-2 w-full flex flex-row gap-4 lg:w-1/2">
-	<img class="h-40 aspect-square flex-none" src="https://placehold.co/600x600" alt={data.model} />
+	<div class="flex flex-col justify-center h-auto w-auto">
+		<img class="h-40 aspect-square flex-none" src="https://placehold.co/600x600" alt={data.model} />
+	</div>
+
 	<div class="flex-grow w-full">
 		<p class="text-2xl font-bold">
-			{data.model}, <span class="text-xl">{data.year_of_purchase.substring(0, 4)}</span>
+			{data.model},
+			<span class="text-xl font-semibold">{data.year_of_purchase.substring(0, 4)}</span>
 		</p>
 		<p class="text-xl">{data.brand_name}</p>
 		<p class="text-sm">Kms: {data.kms}</p>
