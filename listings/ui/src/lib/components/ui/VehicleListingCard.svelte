@@ -26,11 +26,7 @@
 	class="card p-3 border-1 grid grid-cols-5 justify-around h-50 gap-1 shadow-sm w-full lg:w-1/2 lg:gap-3"
 >
 	<div class="h-full col-span-2 border-1 lg:col-span-1 flex flex-col justify-center bg-yellow-100">
-		<img
-			src="https://placehold.co/600x600"
-			alt="Car image"
-			class="lg:h-40 aspect-square bg-red-700"
-		/>
+		<img src="https://placehold.co/600x600" alt={data.model} class="lg:h-40 aspect-square" />
 	</div>
 
 	<div
