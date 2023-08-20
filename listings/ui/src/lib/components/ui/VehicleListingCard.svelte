@@ -60,22 +60,27 @@
 <!-- </div> -->
 
 <div class="shadow-sm border-gray-200 rounded-md border p-2 w-full flex flex-row gap-4 lg:w-1/2">
-	<div class="flex flex-col justify-center h-auto w-auto">
-		<img class="h-40 aspect-square flex-none" src="https://placehold.co/600x600" alt={data.model} />
+	<div class="flex flex-col justify-center w-full lg:w-52">
+		<img class=" aspect-square" src="https://placehold.co/600x600" alt={data.model} />
 	</div>
 
-	<div class="flex-grow w-full">
-		<p class="text-2xl font-bold">
+	<div class="flex-grow w-full grid grid-cols-1 lg:grid-cols-2">
+		<p class="text-2xl font-bold lg:col-span-2">
 			{data.model},
 			<span class="text-xl font-semibold">{data.year_of_purchase.substring(0, 4)}</span>
 		</p>
-		<p class="text-xl">{data.brand_name}</p>
-		<p class="text-sm">Kms: {data.kms}</p>
-		<p class="text-sm">Location: {data.location}</p>
-		<p class="text-sm">Color: {data.color}</p>
-		<p class="text-sm">Price: {price}/-</p>
-		<p class="text-sm">Owner: {data.owner_name}</p>
-		<p class="text-sm">Phone: {data.owner_mobile_number}</p>
-		<p class="text-sm">Fuel Type: {data.fuel_type}</p>
+		<p class="text-xl lg:col-span-2">{data.brand_name}</p>
+		<div>
+			<p class="text-sm">Kms: {data.kms}</p>
+			<p class="text-sm">Location: {data.location}</p>
+			<p class="text-sm">Color: {data.color}</p>
+			<p class="text-sm">Price: {price}/-</p>
+		</div>
+
+		<div>
+			<p class="text-sm">Owner: {data.owner_name}</p>
+			<p class="text-sm">Phone: {data.owner_mobile_number}</p>
+			<p class="text-sm">Fuel Type: {data.fuel_type}</p>
+		</div>
 	</div>
 </div>
