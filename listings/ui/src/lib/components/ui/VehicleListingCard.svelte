@@ -23,10 +23,10 @@
 </script>
 
 <div
-	class="card p-3 border-1 grid grid-cols-5 justify-around h-50 gap-1 shadow-sm w-full lg:w-1/2 lg:gap-3"
+	class="card p-3 border-1 grid grid-cols-5 justify-around h-full gap-5 shadow-sm w-full lg:w-1/2 lg:gap-3"
 >
-	<div class="h-full col-span-2 border-1 lg:col-span-1 flex flex-col justify-center bg-yellow-100">
-		<img src="https://placehold.co/600x600" alt={data.model} class="lg:h-40 aspect-square" />
+	<div class="h-full col-span-2 border-1 lg:col-span-1 flex flex-col justify-center">
+		<img src="https://placehold.co/600x600" alt={data.model} class="h-auto lg:h-40 aspect-square" />
 	</div>
 
 	<div
@@ -42,7 +42,7 @@
 			<p class="font-medium text-xl">{data.brand_name}</p>
 		</div>
 
-		<div class="flex flex-row justify-between w-full">
+		<div class="grid grid-cols-1 justify-between w-full lg:grid-cols-2">
 			<div>
 				<p class="text-sm">Kms: {data.kms}</p>
 				<p class="text-sm">Location: {data.location}</p>
