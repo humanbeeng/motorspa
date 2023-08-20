@@ -14,8 +14,8 @@
 
 <div>
 	<Navbar {supabase} {session} />
-	<div class="grid grid-cols-1 place-items-center w-full gap-4 px-2 md:px-4">
-		<div class="w-full md:w-1/2">
+	<div class="grid grid-cols-1 place-items-center w-full gap-4 px-2 lg:px-4">
+		<div class="w-full lg:w-1/2">
 			<form action="">
 				<div class="input-group input-group-divider grid-cols-[auto_1fr_auto] rounded-md">
 					<div class="input-group-shim"><Icons.search /></div>

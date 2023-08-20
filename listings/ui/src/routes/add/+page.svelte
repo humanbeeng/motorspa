@@ -11,7 +11,7 @@
 <div>
 	<Navbar {supabase} {session} />
 	<form class="px-4" method="POST" use:enhance>
-		<div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+		<div class="grid grid-cols-1 gap-2 lg:grid-cols-2">
 			<label class="label text-md py-1">
 				<span>Brand*</span>
 				<input class="input rounded-md capitalize" required type="text" />
@@ -66,13 +66,13 @@
 				</select>
 			</label>
 
-			<label class="label text-md py-1 col-span-2">
+			<label class="label text-md py-1 lg:col-span-2">
 				<span>Notes</span>
 				<textarea class="textarea rounded-md" />
 			</label>
 		</div>
 
-		<button class="btn w-full bg-black rounded-md text-white md:w-auto my-4" type="submit"
+		<button class="btn w-full bg-black rounded-md text-white lg:w-auto my-4" type="submit"
 			>Add</button
 		>
 	</form>

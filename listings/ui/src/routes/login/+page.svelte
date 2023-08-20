@@ -25,7 +25,7 @@
 <!-- </div> -->
 
 <div
-	class="relative w-screen h-full grid grid-cols-1 place-items-stretch md:grid md:max-w-none md:grid-cols-2 lg:px-0"
+	class="relative w-screen h-full grid grid-cols-1 place-items-stretch lg:grid lg:max-w-none lg:grid-cols-2 lg:px-0"
 >
 	<div
 		class="relative hidden h-full w-full flex-col bg-muted p-10 text-white dark:border-r lg:flex"
@@ -43,7 +43,7 @@
 
 	<div class="w-screen h-screen flex flex-col justify-center p-6 items-center lg:w-full">
 		<div class="card h-40 w-full lg:w-1/2 p-6 grid grid-cols-1 shadow-sm">
-			<h1 class="font-semibold pb-7 text-xl mt-2 select-none md:text-3xl md:font-semibold">
+			<h1 class="font-semibold pb-7 text-xl mt-2 select-none lg:text-3xl lg:font-semibold">
 				Welcome back
 			</h1>
 			<button type="button" class="btn w-auto variant-filled-primary rounded-md" on:click={signIn}>
