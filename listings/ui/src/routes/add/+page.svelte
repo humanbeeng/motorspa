@@ -14,63 +14,98 @@
 		<div class="grid grid-cols-1 gap-2 lg:grid-cols-2">
 			<label class="label text-md py-1">
 				<span>Brand*</span>
-				<input class="input rounded-md capitalize" required type="text" />
+				<input name="brand" class="input rounded-md capitalize" required type="text" />
 			</label>
 
 			<label class="label text-md py-1">
 				<span>Model*</span>
-				<input class="input rounded-md capitalize" required type="text" />
+				<input name="model" class="input rounded-md capitalize" required type="text" />
 			</label>
 
 			<label class="label text-md py-1">
 				<span>Kilometers*</span>
-				<input class="input rounded-md" required type="number" min="1" max="1000000" />
+				<input name="kms" class="input rounded-md" required type="number" min="1" max="1000000" />
 			</label>
 
 			<label class="label text-md py-1">
 				<span>Year of purchase*</span>
-				<input class="input rounded-md" required type="number" min="1850" max="3000" />
+				<input name="year" class="input rounded-md" required type="number" min="1850" max="3000" />
 			</label>
 
 			<label class="label text-md py-1">
 				<span>Color</span>
-				<input class="input rounded-md capitalize" type="text" />
+				<input name="color" class="input rounded-md capitalize" type="text" />
 			</label>
 
 			<label class="label text-md py-1">
-				<span>Owner name</span>
-				<input class="input rounded-md capitalize" autocapitalize="on" type="text" />
+				<span>Owner name*</span>
+				<input
+					required
+					name="owner_name"
+					class="input rounded-md capitalize"
+					autocapitalize="on"
+					type="text"
+				/>
 			</label>
 
 			<label class="label text-md py-1">
-				<span>Owner Phone Number</span>
-				<input class="input rounded-md" maxlength="10" type="tel" />
+				<span>Owner Mobile Number*</span>
+				<input
+					required
+					name="owner_mobile_number"
+					class="input rounded-md"
+					maxlength="10"
+					type="tel"
+				/>
 			</label>
 
 			<label class="label text-md py-1">
-				<span>Price</span>
-				<input class="input rounded-md" type="number" min="1000" max="1000000000" />
+				<span>Price*</span>
+				<input
+					required
+					name="price"
+					class="input rounded-md"
+					type="number"
+					min="1000"
+					max="1000000000"
+				/>
 			</label>
 
 			<label class="label text-md py-1">
 				<span>Location</span>
-				<input class="input rounded-md capitalize" autocapitalize="on" type="text" />
+				<input
+					name="location"
+					class="input rounded-md capitalize"
+					autocapitalize="on"
+					type="text"
+				/>
 			</label>
 
 			<label class="label text-md py-1">
 				<span>Fuel Type*</span>
-				<select class="select rounded-md h-auto" value="petrol">
-					<option value="petrol">Petrol</option>
-					<option value="diesel">Diesel</option>
-					<option value="hybrid">Hybrid</option>
+				<select name="fuel_type" class="select rounded-md h-auto" value="Petrol">
+					<option value="Petrol">Petrol</option>
+					<option value="Diesel">Diesel</option>
+					<option value="Hybrid">Hybrid</option>
 				</select>
 			</label>
 
 			<label class="label text-md py-1 lg:col-span-2">
 				<span>Notes</span>
-				<textarea class="textarea rounded-md" />
+				<textarea name="notes" class="textarea rounded-md" />
 			</label>
 		</div>
+
+		<label class="label text-md py-1">
+			<span>Images</span>
+			<input
+				name="images"
+				multiple
+				class="input rounded-md capitalize"
+				accept="image/*"
+				type="file"
+			/>
+		</label>
 
 		<button class="btn w-full bg-black rounded-md text-white lg:w-auto my-4" type="submit"
 			>Add</button

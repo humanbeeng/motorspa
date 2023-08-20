@@ -14,8 +14,9 @@ export interface Database {
           brand_name: string
           color: string | null
           created_at: string
-          fuel_type: Database["public"]["Enums"]["fuel_type"] | null
+          fuel_type: Database["public"]["Enums"]["fuel_type"]
           id: number
+          images: string[]
           is_sold: boolean
           kms: number
           location: string | null
@@ -30,8 +31,9 @@ export interface Database {
           brand_name: string
           color?: string | null
           created_at?: string
-          fuel_type?: Database["public"]["Enums"]["fuel_type"] | null
+          fuel_type?: Database["public"]["Enums"]["fuel_type"]
           id?: number
+          images?: string[]
           is_sold?: boolean
           kms: number
           location?: string | null
@@ -46,8 +48,9 @@ export interface Database {
           brand_name?: string
           color?: string | null
           created_at?: string
-          fuel_type?: Database["public"]["Enums"]["fuel_type"] | null
+          fuel_type?: Database["public"]["Enums"]["fuel_type"]
           id?: number
+          images?: string[]
           is_sold?: boolean
           kms?: number
           location?: string | null

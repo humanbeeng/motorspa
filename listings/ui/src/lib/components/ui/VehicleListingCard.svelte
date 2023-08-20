@@ -11,6 +11,7 @@
 		is_sold: boolean;
 		price: number;
 		color: string;
+		images: string[];
 	};
 	// TODO : Add image url to props
 	export let data: VehicleListingCardProps;
@@ -61,7 +62,7 @@
 
 <div class="shadow-sm border-gray-200 rounded-md border p-2 w-full flex flex-row gap-4 lg:w-1/2">
 	<div class="flex flex-col justify-center w-full lg:w-52">
-		<img class=" aspect-square" src="https://placehold.co/600x600" alt={data.model} />
+		<img class=" aspect-square" src={data.images[0]} alt={data.model} />
 	</div>
 
 	<div class="flex-grow w-full grid grid-cols-1 lg:grid-cols-2">
