@@ -7,7 +7,7 @@
 	let isLoading = false;
 	async function signIn() {
 		isLoading = true;
-		supabase.auth.signInWithOAuth({
+		const { error } = await supabase.auth.signInWithOAuth({
 			provider: 'google',
 			options: {
 				redirectTo: `${location.origin}/auth/callback`
@@ -16,6 +16,10 @@
 		setTimeout(() => {
 			isLoading = false;
 		}, 3000);
+
+		if (error) {
+			console.log(error);
+		}
 	}
 </script>
 
