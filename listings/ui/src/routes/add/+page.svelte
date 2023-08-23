@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import { goto } from '$app/navigation';
 	import Navbar from '$components/ui/Navbar.svelte';
 
 	export let data;
+	export let form;
 
 	let { supabase, session } = data;
 	$: ({ supabase, session } = data);
@@ -107,6 +109,12 @@
 			/>
 		</label>
 
+		{#if form?.success}
+			<section class="p-1">
+				<p>Listing added 🥳</p>
+				{goto('/')}
+			</section>
+		{/if}
 		<button class="btn w-full bg-black rounded-md text-white lg:w-auto my-4" type="submit"
 			>Add</button
 		>

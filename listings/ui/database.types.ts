@@ -25,7 +25,7 @@ export interface Database {
           owner_mobile_number: string
           owner_name: string | null
           price: number
-          year_of_purchase: number
+          year_of_purchase: string
         }
         Insert: {
           brand_name: string
@@ -42,7 +42,7 @@ export interface Database {
           owner_mobile_number?: string
           owner_name?: string | null
           price: number
-          year_of_purchase: number
+          year_of_purchase?: string
         }
         Update: {
           brand_name?: string
@@ -59,7 +59,7 @@ export interface Database {
           owner_mobile_number?: string
           owner_name?: string | null
           price?: number
-          year_of_purchase?: number
+          year_of_purchase?: string
         }
         Relationships: []
       }
