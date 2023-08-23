@@ -17,7 +17,6 @@ owner_mobile_number, brand_name`
 	} else {
 		data.map(async (v) => {
 			const image_paths = v.images;
-
 			let image_urls: string[] = [];
 			image_paths.forEach((image_path: string) => {
 				const { data } = supabase.storage

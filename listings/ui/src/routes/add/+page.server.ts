@@ -19,22 +19,25 @@ export const actions = {
 		const supabase: SupabaseClient = event.locals.supabase;
 		const images = data.getAll('images');
 		console.log(...images);
-		let urls: string[] = [];
+		const urls: string[] = [];
 
-		images.forEach(async (image: File) => {
+		for (const image of images) {
 			if (image.size == 0) {
 				return;
 			}
+
 			const res = await supabase.storage
 				.from('vehicle_images')
 				.upload(image.name, image, { contentType: 'multipart/form-data' });
 			if (res.error) {
-				console.log(res.error);
+				console.log('Error', res.error);
 				return;
-			} else {
-				urls = [...urls, res.data.path];
 			}
-		});
+			console.log(res.data.path);
+			urls.push(res.data.path);
+		}
+
+		console.log('URLS:', urls);
 
 		const { error } = await supabase.from('vehicles').insert({
 			model: data.get('model'),
